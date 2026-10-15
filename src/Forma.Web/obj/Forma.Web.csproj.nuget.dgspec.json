@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\chorus\\desktop\\FORMA\\src\\Forma.Web\\Forma.Web.csproj": {}
+    "C:\\Users\\chorus\\desktop\\Forma\\src\\Forma.Web\\Forma.Web.csproj": {}
   },
   "projects": {
-    "C:\\Users\\chorus\\desktop\\FORMA\\src\\Forma.Web\\Forma.Web.csproj": {
+    "C:\\Users\\chorus\\desktop\\Forma\\src\\Forma.Web\\Forma.Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\chorus\\desktop\\FORMA\\src\\Forma.Web\\Forma.Web.csproj",
+        "projectUniqueName": "C:\\Users\\chorus\\desktop\\Forma\\src\\Forma.Web\\Forma.Web.csproj",
         "projectName": "Forma.Web",
-        "projectPath": "C:\\Users\\chorus\\desktop\\FORMA\\src\\Forma.Web\\Forma.Web.csproj",
+        "projectPath": "C:\\Users\\chorus\\desktop\\Forma\\src\\Forma.Web\\Forma.Web.csproj",
         "packagesPath": "C:\\Users\\chorus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\chorus\\desktop\\FORMA\\src\\Forma.Web\\obj\\",
+        "outputPath": "C:\\Users\\chorus\\desktop\\Forma\\src\\Forma.Web\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

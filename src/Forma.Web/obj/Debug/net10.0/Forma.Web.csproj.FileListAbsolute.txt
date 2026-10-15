@@ -21,7 +21,6 @@ C:\Users\chorus\desktop\FORMA\src\Forma.Web\obj\Debug\net10.0\rjsmcshtml.dswa.ca
 C:\Users\chorus\desktop\FORMA\src\Forma.Web\obj\Debug\net10.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\chorus\desktop\FORMA\src\Forma.Web\obj\Debug\net10.0\scopedcss\bundle\Forma.Web.styles.css
 C:\Users\chorus\desktop\FORMA\src\Forma.Web\obj\Debug\net10.0\scopedcss\projectbundle\Forma.Web.bundle.scp.css
-C:\Users\chorus\desktop\FORMA\src\Forma.Web\obj\Debug\net10.0\compressed\tx6hnup2pj-{0}-b9sayid5wm-b9sayid5wm.gz
 C:\Users\chorus\desktop\FORMA\src\Forma.Web\obj\Debug\net10.0\compressed\tpf1xw16lv-{0}-61n19gt1b8-61n19gt1b8.gz
 C:\Users\chorus\desktop\FORMA\src\Forma.Web\obj\Debug\net10.0\compressed\ro4hzdhomx-{0}-xtxxf3hu2r-xtxxf3hu2r.gz
 C:\Users\chorus\desktop\FORMA\src\Forma.Web\obj\Debug\net10.0\compressed\f1ecvw4x1p-{0}-bqjiyaj88i-bqjiyaj88i.gz
@@ -95,3 +94,6 @@ C:\Users\chorus\desktop\FORMA\src\Forma.Web\obj\Debug\net10.0\refint\Forma.Web.d
 C:\Users\chorus\desktop\FORMA\src\Forma.Web\obj\Debug\net10.0\Forma.Web.pdb
 C:\Users\chorus\desktop\FORMA\src\Forma.Web\obj\Debug\net10.0\Forma.Web.genruntimeconfig.cache
 C:\Users\chorus\desktop\FORMA\src\Forma.Web\obj\Debug\net10.0\ref\Forma.Web.dll
+C:\Users\chorus\desktop\Forma\src\Forma.Web\obj\Debug\net10.0\Forma.Web.sourcelink.json
+C:\Users\chorus\desktop\Forma\src\Forma.Web\obj\Debug\net10.0\compressed\fmax33ajv1-{0}-dfcuicl20t-dfcuicl20t.gz
+C:\Users\chorus\desktop\Forma\src\Forma.Web\obj\Debug\net10.0\compressed\tx6hnup2pj-{0}-6hkybdk0jy-6hkybdk0jy.gz
