@@ -1,0 +1,5 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Forma.Web/Forma.Web.csproj" />
+  </Folder>
+</Solution>
