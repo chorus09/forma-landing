@@ -1,3 +1,56 @@
+
 @import "tailwindcss";
 
 @source "../../Pages";
+
+@theme {
+    --color-forma-bg: #0B0D0C;
+    --color-forma-surface: #171B18;
+    --color-forma-lime: #C7FF52;
+    --color-forma-muted: #9BA59D;
+    --color-forma-border: #303830;
+
+    --font-sans: "Inter", sans-serif;
+    --font-display: "Space Grotesk", sans-serif;
+
+    --radius-forma: 1.25rem;
+}
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background-color: var(--color-forma-bg);
+        color: #ffffff;
+        font-family: var(--font-sans);
+    }
+
+    ::selection {
+        background-color: var(--color-forma-lime);
+        color: var(--color-forma-bg);
+    }
+}
+
+@layer components {
+    .forma-container {
+        @apply mx-auto max-w-7xl px-6;
+    }
+
+    .forma-card {
+        @apply rounded-forma border border-forma-border bg-forma-surface p-8;
+    }
+
+    .forma-btn-primary {
+        @apply inline-flex items-center justify-center rounded-full bg-forma-lime px-7 py-3 font-semibold text-forma-bg transition-colors duration-200 hover:bg-white;
+    }
+
+    .forma-btn-secondary {
+        @apply inline-flex items-center justify-center rounded-full border border-forma-border px-7 py-3 font-semibold text-white transition-colors duration-200 hover:border-forma-lime hover:text-forma-lime;
+    }
+
+    .forma-section {
+        @apply py-24 md:py-32;
+    }
+}

@@ -1,14 +1,6 @@
 ﻿@page
 @model IndexModel
 
-<section class="min-h-screen bg-[#0B0D0C] flex items-center justify-center">
-    <div class="text-center">
-        <h1 class="text-7xl font-bold text-[#C7FF52]">
-            forma.
-        </h1>
+@await Html.PartialAsync("_Hero")
 
-        <p class="mt-4 text-xl text-white">
-            Your body. Your progress.
-        </p>
-    </div>
-</section>
+@await Html.PartialAsync("_Features")

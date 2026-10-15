@@ -95,5 +95,5 @@ C:\Users\chorus\desktop\FORMA\src\Forma.Web\obj\Debug\net10.0\Forma.Web.pdb
 C:\Users\chorus\desktop\FORMA\src\Forma.Web\obj\Debug\net10.0\Forma.Web.genruntimeconfig.cache
 C:\Users\chorus\desktop\FORMA\src\Forma.Web\obj\Debug\net10.0\ref\Forma.Web.dll
 C:\Users\chorus\desktop\Forma\src\Forma.Web\obj\Debug\net10.0\Forma.Web.sourcelink.json
-C:\Users\chorus\desktop\Forma\src\Forma.Web\obj\Debug\net10.0\compressed\fmax33ajv1-{0}-dfcuicl20t-dfcuicl20t.gz
-C:\Users\chorus\desktop\Forma\src\Forma.Web\obj\Debug\net10.0\compressed\tx6hnup2pj-{0}-6hkybdk0jy-6hkybdk0jy.gz
+C:\Users\chorus\desktop\Forma\src\Forma.Web\obj\Debug\net10.0\compressed\fmax33ajv1-{0}-g6rjr5l3ws-g6rjr5l3ws.gz
+C:\Users\chorus\desktop\Forma\src\Forma.Web\obj\Debug\net10.0\compressed\tx6hnup2pj-{0}-9ne9hatgry-9ne9hatgry.gz

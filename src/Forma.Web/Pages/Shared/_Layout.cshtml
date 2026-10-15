@@ -1,24 +1,29 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>FORMA — Your Body. Your Progress.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <link rel="stylesheet"
-          href="~/css/site.css"
-          asp-append-version="true" />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
 </head>
 
-<body class="m-0 min-h-screen bg-[#0B0D0C] text-white">
-
+<body class="min-h-screen bg-forma-bg font-sans text-white">
+    @await Html.PartialAsync("_Navbar")
     <main>
         @RenderBody()
     </main>
-
+    @await Html.PartialAsync("_Footer")
     @await RenderSectionAsync("Scripts", required: false)
 
 </body>
+
 </html>

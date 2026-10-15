@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Forma.Web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c4973f75d219019ca255ce5ed3bd61eb1c196afa")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6e4ebd0f93090a20e5a90308d055402ccbfca294")]
 [assembly: System.Reflection.AssemblyProductAttribute("Forma.Web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Forma.Web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
