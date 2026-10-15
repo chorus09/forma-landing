@@ -1,20 +1,54 @@
-<nav aria-label="Main navigation" class="border-b border-forma-border">
+<nav id="site-navbar" class="relative z-50 border-b border-forma-border bg-forma-bg/95" aria-label="Main navigation">
 
-  <div class="forma-container flex items-center justify-between py-5">
+  <div class="forma-container flex h-20 items-center justify-between">
 
+    <!-- Logo -->
     <a href="/" class="font-display text-2xl font-bold text-forma-lime">
       forma.
     </a>
 
-    <div class="flex items-center gap-6">
+    <!-- Desktop navigation -->
+    <div class="hidden items-center gap-8 md:flex">
       <a href="#features" class="text-sm text-white transition-colors hover:text-forma-lime">
         Features
       </a>
+
+      <!--<a href="#demo" class="text-sm text-white transition-colors hover:text-forma-lime">
+        Demo
+      </a>-->
 
       <a href="#about" class="text-sm text-white transition-colors hover:text-forma-lime">
         About
       </a>
     </div>
 
+    <!-- Mobile menu button -->
+    <button id="mobile-menu-button" type="button"
+            class="inline-flex items-center justify-center rounded-lg p-2 text-white hover:bg-forma-surface md:hidden"
+            aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+
+      <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile navigation -->
+  <div id="mobile-menu" class="hidden border-t border-forma-border bg-forma-bg md:hidden">
+
+    <div class="forma-container flex flex-col gap-5 py-6">
+      <a href="#features" class="text-sm text-white hover:text-forma-lime">
+        Features
+      </a>
+
+      <!--<a href="#demo" class="text-sm text-white hover:text-forma-lime">
+        Demo
+      </a>-->
+
+      <a href="#about" class="text-sm text-white hover:text-forma-lime">
+        About
+      </a>
+    </div>
   </div>
 </nav>
