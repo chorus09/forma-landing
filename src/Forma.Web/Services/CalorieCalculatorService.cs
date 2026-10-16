@@ -15,11 +15,22 @@ public sealed class CalorieCalculatorService
           "Age must be between 18 and 120.");
 
     if (!double.IsFinite(input.WeightKg) ||
-        input.WeightKg <= 0 ||
-        !double.IsFinite(input.HeightCm) ||
-        input.HeightCm <= 0)
-      throw new ArgumentException(
-          "Height and weight must be positive finite numbers.");
+    input.WeightKg < 1 ||
+    input.WeightKg > 500)
+    {
+      throw new ArgumentOutOfRangeException(
+          nameof(input.WeightKg),
+          "Weight must be between 1 and 500 kg.");
+    }
+
+    if (!double.IsFinite(input.HeightCm) ||
+        input.HeightCm < 50 ||
+        input.HeightCm > 250)
+    {
+      throw new ArgumentOutOfRangeException(
+          nameof(input.HeightCm),
+          "Height must be between 50 and 250 cm.");
+    }
 
     if (!Enum.IsDefined(input.Sex) ||
         !Enum.IsDefined(input.ActivityLevel))

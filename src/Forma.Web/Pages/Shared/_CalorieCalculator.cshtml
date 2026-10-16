@@ -1,0 +1,124 @@
+<section id="demo" class="forma-section px-6">
+  <div class="forma-container">
+    <div class="mx-auto mb-12 max-w-3xl text-center">
+      <span class="text-xs font-bold uppercase tracking-widest text-forma-lime">
+        Interactive Demo
+      </span>
+
+      <h2 class="mt-5 font-display text-4xl font-bold md:text-6xl">
+        Know your <span class="text-forma-lime">numbers.</span>
+      </h2>
+
+      <p class="mt-5 text-forma-muted">
+        Explore an estimate of your daily energy needs.
+        Calculations use the Mifflin-St Jeor equation.
+      </p>
+    </div>
+
+    <div class="mx-auto grid max-w-5xl gap-6 lg:grid-cols-2">
+      <!-- Input panel -->
+      <form id="calorie-form" class="forma-card space-y-6">
+        <h3 class="font-display text-2xl font-bold">
+          Your details
+        </h3>
+
+        <div>
+          <label for="calorie-age" class="mb-2 block text-sm">
+            Age
+          </label>
+          <input id="calorie-age" type="number" min="18" max="120" value="25" required
+                 class="w-full rounded-xl border border-forma-border bg-forma-bg p-3 text-white focus:border-forma-lime focus:outline-none" />
+        </div>
+
+        <div class="grid gap-4 sm:grid-cols-2">
+          <div>
+            <label for="calorie-weight" class="mb-2 block text-sm">
+              Weight (kg)
+            </label>
+            <input id="calorie-weight" type="number" min="1" max="500" step="0.1" value="75" required
+                   class="w-full rounded-xl border border-forma-border bg-forma-bg p-3 text-white focus:border-forma-lime focus:outline-none" />
+          </div>
+
+          <div>
+            <label for="calorie-height" class="mb-2 block text-sm">
+              Height (cm)
+            </label>
+            <input id="calorie-height" type="number" min="50" max="250" step="0.1" value="180" required
+                   class="w-full rounded-xl border border-forma-border bg-forma-bg p-3 text-white focus:border-forma-lime focus:outline-none" />
+          </div>
+        </div>
+
+        <div>
+          <label for="calorie-sex" class="mb-2 block text-sm">
+            Sex used by the estimation formula
+          </label>
+          <select id="calorie-sex" class="w-full rounded-xl border border-forma-border bg-forma-bg p-3 text-white">
+            <option value="0">Male</option>
+            <option value="1">Female</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="calorie-activity" class="mb-2 block text-sm">
+            Activity level
+          </label>
+          <select id="calorie-activity" class="w-full rounded-xl border border-forma-border bg-forma-bg p-3 text-white">
+            <option value="0">Sedentary</option>
+            <option value="1">Lightly active</option>
+            <option value="2" selected>Moderately active</option>
+            <option value="3">Very active</option>
+            <option value="4">Extra active</option>
+          </select>
+        </div>
+
+        <button id="calorie-submit" type="submit" class="forma-btn-primary w-full">
+          Calculate calories
+        </button>
+
+        <p id="calorie-error" role="alert" class="hidden text-sm text-red-400"></p>
+      </form>
+
+      <!-- Results panel -->
+      <div class="forma-card flex flex-col justify-center">
+        <span class="text-xs font-semibold uppercase tracking-widest text-forma-lime">
+          Your estimate
+        </span>
+
+        <p class="mt-6 text-sm text-forma-muted">
+          Basal Metabolic Rate
+        </p>
+        <div class="mt-2 flex items-baseline gap-2">
+          <strong id="calorie-bmr" class="font-display text-5xl">
+            —
+          </strong>
+          <span class="text-forma-muted">kcal/day</span>
+        </div>
+
+        <div class="my-8 border-t border-forma-border"></div>
+
+        <p class="text-sm text-forma-muted">
+          Estimated Daily Energy Expenditure
+        </p>
+        <div class="mt-2 flex items-baseline gap-2">
+          <strong id="calorie-tdee" class="font-display text-5xl text-forma-lime">
+            —
+          </strong>
+          <span class="text-forma-muted">kcal/day</span>
+        </div>
+
+        <div class="mt-8 rounded-xl bg-forma-lime/10 p-4">
+          <p id="calorie-status" role="status" aria-live="polite" class="text-sm text-forma-muted">
+            Enter your details and calculate to see an estimate.
+          </p>
+        </div>
+
+        <p class="mt-5 text-xs leading-relaxed text-forma-muted">
+          Educational estimate only, not medical or dietary
+          advice. Not suitable during pregnancy,
+          breastfeeding, or for people under 18.
+          Individual energy needs vary.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
