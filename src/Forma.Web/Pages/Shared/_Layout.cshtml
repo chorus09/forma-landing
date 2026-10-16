@@ -23,6 +23,8 @@
     </main>
     @await Html.PartialAsync("_Footer")
     @await RenderSectionAsync("Scripts", required: false)
+    <script src="~/js/modules/progress.js"
+        asp-append-version="true" defer></script>
     <script src="~/js/modules/calories.js"
         asp-append-version="true" defer></script>
     <script src="~/js/navigation.js" asp-append-version="true" defer></script>
