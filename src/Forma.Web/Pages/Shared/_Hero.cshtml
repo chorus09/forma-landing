@@ -1,26 +1,213 @@
-<section id="home" class="flex min-h-[80vh] items-center justify-center px-6">
+<section id="home" class="relative isolate overflow-hidden px-6 py-20 lg:py-28">
 
-  <div class="mx-auto max-w-4xl text-center">
-
-    <span class="text-sm font-semibold uppercase tracking-[0.25em] text-forma-lime">
-      Fitness · Nutrition · Progress
-    </span>
-
-    <h1 class="mt-6 font-display text-5xl font-bold tracking-tight md:text-7xl">
-      Your body.
-      <span class="text-forma-lime">Your progress.</span>
-    </h1>
-
-    <p class="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-forma-muted">
-      One intelligent experience for nutrition,
-      workouts, and body transformation.
-    </p>
-
-    <a href="#features" class="forma-btn-primary mt-8">
-      Explore FORMA
-      <span aria-hidden="true" class="ml-2">↗</span>
-    </a>
-
+  <!-- Background effects -->
+  <div aria-hidden="true"
+       class="pointer-events-none absolute -right-32 top-0 -z-10 h-[550px] w-[550px] rounded-full bg-forma-lime/10 blur-[120px]">
   </div>
 
+  <div class="mx-auto grid max-w-7xl items-center gap-16 lg:grid-cols-2">
+
+    <!-- Left: Hero content -->
+    <div>
+      <div
+        class="mb-8 inline-flex items-center gap-3 rounded-full border border-forma-lime/20 bg-forma-lime/5 px-4 py-2">
+        <span class="h-2 w-2 rounded-full bg-forma-lime"></span>
+        <span class="text-xs font-semibold uppercase tracking-[0.2em] text-forma-lime">
+          The future of personal fitness
+        </span>
+      </div>
+
+      <h1 class="font-display text-5xl font-bold leading-[1.08] tracking-tight sm:text-6xl xl:text-7xl">
+        Your body.
+        <br />
+        Your progress.
+        <br />
+        <span class="text-forma-lime">
+          Your FORMA.
+        </span>
+      </h1>
+
+      <p class="mt-8 max-w-xl text-lg leading-relaxed text-forma-muted">
+        Discover a smarter approach to nutrition,
+        personalized workouts, and progress tracking.
+        Everything you need, all in one place.
+      </p>
+
+      <div class="mt-10 flex flex-wrap items-center gap-4">
+        <a href="#features" class="forma-btn-primary">
+          Explore Features
+          <span class="ml-2" aria-hidden="true">↗</span>
+        </a>
+
+        <a href="#about" class="forma-btn-secondary">
+          Discover FORMA
+        </a>
+      </div>
+
+      <div class="mt-14 flex flex-wrap items-center gap-8 border-t border-forma-border pt-8">
+
+        <div>
+          <p class="font-display text-2xl font-bold text-white">
+            360°
+          </p>
+          <p class="mt-1 text-xs text-forma-muted">
+            Wellness vision
+          </p>
+        </div>
+
+        <div>
+          <p class="font-display text-2xl font-bold text-white">
+            5
+          </p>
+          <p class="mt-1 text-xs text-forma-muted">
+            Interactive demos
+          </p>
+        </div>
+
+        <div>
+          <p class="font-display text-2xl font-bold text-forma-lime">
+            1
+          </p>
+          <p class="mt-1 text-xs text-forma-muted">
+            Connected concept
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Right: Application preview -->
+    <div class="relative mx-auto w-full max-w-[440px]">
+
+      <div aria-hidden="true" class="absolute inset-8 rounded-full bg-forma-lime/15 blur-[90px]">
+      </div>
+
+      <div class="relative rounded-[2rem] border border-white/10 bg-forma-surface p-5 shadow-2xl sm:p-7">
+
+        <!-- App header -->
+        <div class="flex items-center justify-between">
+          <div>
+            <p class="font-display text-xl font-bold text-forma-lime">
+              forma.
+            </p>
+            <p class="mt-1 text-xs text-forma-muted">
+              Your daily overview
+            </p>
+          </div>
+
+          <div class="flex h-11 w-11 items-center justify-center rounded-full bg-forma-lime font-bold text-forma-bg">
+            A
+          </div>
+        </div>
+
+        <!-- Welcome -->
+        <div class="mt-9">
+          <p class="text-sm text-forma-muted">
+            Good morning, Alex!
+          </p>
+
+          <h2 class="mt-1 font-display text-2xl font-bold">
+            Keep moving forward.
+          </h2>
+        </div>
+
+        <!-- Calories card -->
+        <div class="mt-7 rounded-2xl border border-white/10 bg-forma-bg p-6">
+
+          <div class="flex items-center justify-between">
+            <p class="text-sm text-forma-muted">
+              Daily nutrition
+            </p>
+            <span class="text-xs text-forma-lime">
+              Demo data
+            </span>
+          </div>
+
+          <div class="mt-5 flex items-baseline gap-2">
+            <span class="font-display text-4xl font-bold">
+              1,460
+            </span>
+            <span class="text-sm text-forma-muted">
+              / 2,200 kcal
+            </span>
+          </div>
+
+          <div class="mt-5 h-2 overflow-hidden rounded-full bg-white/10">
+            <div class="h-full w-[66%] rounded-full bg-forma-lime"></div>
+          </div>
+
+          <p class="mt-3 text-xs text-forma-muted">
+            Illustrative daily calorie target
+          </p>
+        </div>
+
+        <!-- Metrics -->
+        <div class="mt-4 grid grid-cols-2 gap-4">
+
+          <div class="rounded-2xl border border-white/10 bg-forma-bg p-5">
+            <span class="text-xl" aria-hidden="true">🏋️</span>
+
+            <p class="mt-4 font-display text-2xl font-bold">
+              35 min
+            </p>
+
+            <p class="mt-1 text-xs text-forma-muted">
+              Today's activity
+            </p>
+          </div>
+
+          <div class="rounded-2xl border border-white/10 bg-forma-bg p-5">
+            <span class="text-xl" aria-hidden="true">⚡</span>
+
+            <p class="mt-4 font-display text-2xl font-bold">
+              4 / 5
+            </p>
+
+            <p class="mt-1 text-xs text-forma-muted">
+              Weekly workouts
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Weekly progress -->
+        <div class="mt-4 rounded-2xl border border-white/10 bg-forma-bg p-5">
+
+          <div class="flex items-center justify-between">
+            <p class="text-sm font-semibold">
+              Weekly activity
+            </p>
+
+            <span class="text-xs text-forma-muted">
+              This week
+            </span>
+          </div>
+
+          <div class="mt-6 flex h-24 items-end justify-between gap-3" role="img"
+               aria-label="Illustrative weekly activity chart: Monday 40, Tuesday 65, Wednesday 50, Thursday 85, Friday 70, Saturday 95, Sunday 55 percent">
+
+            <div class="h-[40%] flex-1 rounded-t-md bg-forma-lime/30"></div>
+            <div class="h-[65%] flex-1 rounded-t-md bg-forma-lime/40"></div>
+            <div class="h-[50%] flex-1 rounded-t-md bg-forma-lime/50"></div>
+            <div class="h-[85%] flex-1 rounded-t-md bg-forma-lime/70"></div>
+            <div class="h-[70%] flex-1 rounded-t-md bg-forma-lime/60"></div>
+            <div class="h-[95%] flex-1 rounded-t-md bg-forma-lime"></div>
+            <div class="h-[55%] flex-1 rounded-t-md bg-forma-lime/40"></div>
+          </div>
+
+          <div aria-hidden="true" class="mt-3 flex justify-between text-[10px] text-forma-muted">
+            <span>M</span>
+            <span>T</span>
+            <span>W</span>
+            <span>T</span>
+            <span>F</span>
+            <span>S</span>
+            <span>S</span>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
 </section>
