@@ -1,6 +1,14 @@
+# .NET build artifacts
 **/bin/
 **/obj/
+
+# Visual Studio
 .vs/
-.vscode/
+
+# Node.js
 node_modules/
+
+# Local environment
 .env
+.env.*
+!.env.example
