@@ -1,0 +1,110 @@
+<section id="workout-planner" class="forma-section px-6">
+  <div class="forma-container">
+
+    <div class="mx-auto mb-12 max-w-3xl text-center">
+      <span class="text-xs font-bold uppercase tracking-widest text-forma-lime">
+        Interactive Demo / 03
+      </span>
+
+      <h2 class="mt-5 font-display text-4xl font-bold md:text-6xl">
+        Train with
+        <span class="text-forma-lime">purpose.</span>
+      </h2>
+
+      <p class="mt-5 text-forma-muted">
+        Explore an illustrative workout routine
+        based on your selected goal and fitness level.
+      </p>
+    </div>
+
+    <div class="mx-auto grid max-w-6xl gap-6 lg:grid-cols-5">
+
+      <!-- Configuration -->
+      <form id="workout-form" class="forma-card space-y-6 lg:col-span-2">
+
+        <h3 class="font-display text-2xl font-bold">
+          Build your routine
+        </h3>
+
+        <div>
+          <label for="workout-goal" class="mb-2 block text-sm">
+            Your goal
+          </label>
+
+          <select id="workout-goal" class="w-full rounded-xl border border-forma-border bg-forma-bg p-3 text-white">
+            <option value="0">Build Strength</option>
+            <option value="1">Improve Endurance</option>
+            <option value="2">Improve Mobility</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="workout-level" class="mb-2 block text-sm">
+            Fitness level
+          </label>
+
+          <select id="workout-level" class="w-full rounded-xl border border-forma-border bg-forma-bg p-3 text-white">
+            <option value="0">Beginner</option>
+            <option value="1">Intermediate</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="workout-days" class="mb-2 block text-sm">
+            Training days per week
+          </label>
+
+          <select id="workout-days" class="w-full rounded-xl border border-forma-border bg-forma-bg p-3 text-white">
+            <option value="2">2 days</option>
+            <option value="3" selected>3 days</option>
+            <option value="4">4 days</option>
+            <option value="5">5 days</option>
+          </select>
+        </div>
+
+        <button id="workout-submit" type="submit" class="forma-btn-primary w-full">
+          Generate Workout Plan
+        </button>
+
+        <p id="workout-error" role="alert" class="hidden text-sm text-red-400"></p>
+
+        <p class="text-xs leading-relaxed text-forma-muted">
+          Demo for generally healthy adults.
+          This is not personalized medical
+          or fitness advice.
+        </p>
+      </form>
+
+      <!-- Results -->
+      <div class="forma-card lg:col-span-3">
+
+        <div class="flex flex-wrap items-center justify-between gap-3">
+          <div>
+            <span class="text-xs font-semibold uppercase tracking-widest text-forma-lime">
+              Your Workout Plan
+            </span>
+
+            <h3 id="workout-title" class="mt-3 font-display text-2xl font-bold">
+              Ready when you are.
+            </h3>
+          </div>
+
+          <span class="rounded-full border border-forma-lime/30 px-3 py-1 text-xs text-forma-lime">
+            Demo
+          </span>
+        </div>
+
+        <p id="workout-status" role="status" aria-live="polite" class="mt-5 text-sm text-forma-muted">
+          Choose your preferences and generate a plan.
+        </p>
+
+        <div id="workout-results" class="mt-6 space-y-4">
+        </div>
+
+        <p id="workout-disclaimer" class="mt-6 text-xs leading-relaxed text-forma-muted">
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>

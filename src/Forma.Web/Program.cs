@@ -8,6 +8,7 @@ builder.Services.AddRazorPages();
 
 // Register calculator service in DI
 builder.Services.AddSingleton<CalorieCalculatorService>();
+builder.Services.AddSingleton<WorkoutPlannerService>();
 
 var app = builder.Build();
 
@@ -34,6 +35,22 @@ app.MapPost("/api/calories",
         {
             var result = calculator.Calculate(input);
             return Results.Ok(result);
+        }
+        catch (ArgumentException ex)
+        {
+            return Results.BadRequest(new
+            {
+                error = ex.Message
+            });
+        }
+    });
+app.MapPost("/api/workouts",
+    (WorkoutRequest request, WorkoutPlannerService planner) =>
+    {
+        try
+        {
+            var plan = planner.Generate(request);
+            return Results.Ok(plan);
         }
         catch (ArgumentException ex)
         {
