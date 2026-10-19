@@ -9,6 +9,7 @@ builder.Services.AddRazorPages();
 // Register calculator service in DI
 builder.Services.AddSingleton<CalorieCalculatorService>();
 builder.Services.AddSingleton<WorkoutPlannerService>();
+builder.Services.AddSingleton<DemoDataService>();
 
 var app = builder.Build();
 
@@ -59,6 +60,18 @@ app.MapPost("/api/workouts",
                 error = ex.Message
             });
         }
+    });
+
+app.MapGet("/api/demo/dashboard",
+    (DemoDataService demo) =>
+    {
+        return Results.Ok(demo.GetDashboard());
+    });
+
+app.MapGet("/api/demo/products",
+    (DemoDataService demo) =>
+    {
+        return Results.Ok(demo.GetProducts());
     });
 
 app.Run();
