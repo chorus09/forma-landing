@@ -1,0 +1,183 @@
+<section id="progress-dashboard" class="forma-section">
+  <div class="forma-container">
+
+    <div class="mx-auto mb-12 max-w-3xl text-center">
+      <span class="text-xs font-bold uppercase tracking-widest text-forma-lime">
+        Interactive Demo / 04
+      </span>
+
+      <h2 class="mt-5 font-display text-4xl font-bold md:text-6xl">
+        Progress you can
+        <span class="text-forma-lime">see.</span>
+      </h2>
+
+      <p class="mt-5 text-forma-muted">
+        Visualize your training consistency and explore
+        every milestone in one dashboard.
+      </p>
+    </div>
+
+    <div id="dashboard-widget" class="mx-auto max-w-6xl" aria-busy="true">
+
+      <!-- Summary statistics -->
+      <div class="mb-6 grid gap-4 sm:grid-cols-3">
+
+        <div class="forma-card">
+          <p class="text-sm text-forma-muted">
+            Total workouts
+          </p>
+          <p id="dashboard-workouts" class="mt-3 font-display text-4xl font-bold text-forma-lime">
+            —
+          </p>
+          <p class="mt-3 text-xs text-forma-muted">
+            Completed sessions
+          </p>
+        </div>
+
+        <div class="forma-card">
+          <p class="text-sm text-forma-muted">
+            Active minutes
+          </p>
+          <p id="dashboard-minutes" class="mt-3 font-display text-4xl font-bold">
+            —
+          </p>
+          <p class="mt-3 text-xs text-forma-muted">
+            Across all demo weeks
+          </p>
+        </div>
+
+        <div class="forma-card">
+          <p class="text-sm text-forma-muted">
+            Current goal streak
+          </p>
+          <p id="dashboard-streak" class="mt-3 font-display text-4xl font-bold">
+            —
+          </p>
+          <p class="mt-3 text-xs text-forma-muted">
+            Consecutive weeks
+          </p>
+        </div>
+
+      </div>
+
+      <div class="grid gap-6 lg:grid-cols-12">
+
+        <!-- Chart -->
+        <div class="forma-card min-w-0 lg:col-span-8">
+
+          <div class="flex flex-wrap items-start justify-between gap-5">
+            <div>
+              <span class="text-xs font-semibold uppercase tracking-widest text-forma-lime">
+                Training activity
+              </span>
+
+              <h3 class="mt-3 font-display text-2xl font-bold">
+                Weekly overview
+              </h3>
+            </div>
+
+            <div class="inline-flex rounded-full border border-forma-border bg-forma-bg p-1" role="group"
+                 aria-label="Choose chart metric">
+
+              <button type="button" class="dashboard-metric-button" data-dashboard-metric="workouts"
+                      aria-pressed="true">
+                Workouts
+              </button>
+
+              <button type="button" class="dashboard-metric-button" data-dashboard-metric="minutes"
+                      aria-pressed="false">
+                Minutes
+              </button>
+            </div>
+          </div>
+
+          <p id="dashboard-chart-description" class="mt-5 text-sm text-forma-muted">
+            Loading weekly activity...
+          </p>
+
+          <ul id="dashboard-bars" class="dashboard-chart mt-8" aria-label="Weekly training activity">
+          </ul>
+
+          <p class="mt-5 text-xs text-forma-muted">
+            Select a week to explore its activity details.
+          </p>
+        </div>
+
+        <!-- Selected week -->
+        <aside class="forma-card lg:col-span-4">
+
+          <span class="text-xs font-semibold uppercase tracking-widest text-forma-lime">
+            Week spotlight
+          </span>
+
+          <h3 id="dashboard-selected-week" class="mt-4 font-display text-3xl font-bold">
+            —
+          </h3>
+
+          <div class="mt-8 space-y-5">
+
+            <div class="flex items-center justify-between gap-4">
+              <span class="text-sm text-forma-muted">
+                Workouts
+              </span>
+              <strong id="dashboard-week-workouts">—</strong>
+            </div>
+
+            <div class="flex items-center justify-between gap-4">
+              <span class="text-sm text-forma-muted">
+                Active minutes
+              </span>
+              <strong id="dashboard-week-minutes">—</strong>
+            </div>
+
+            <div class="flex items-center justify-between gap-4">
+              <span class="text-sm text-forma-muted">
+                Weekly target
+              </span>
+              <strong id="dashboard-week-goal">—</strong>
+            </div>
+
+            <div>
+              <div class="mb-3 flex items-center justify-between gap-3">
+                <span class="text-sm text-forma-muted">
+                  Goal completion
+                </span>
+                <span id="dashboard-goal-percent" class="text-sm font-semibold text-forma-lime">
+                  —
+                </span>
+              </div>
+
+              <div id="dashboard-goal-progress" class="h-2 overflow-hidden rounded-full bg-forma-bg" role="progressbar"
+                   aria-label="Weekly workout goal completion" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                <div id="dashboard-goal-fill" class="h-full w-0 rounded-full bg-forma-lime transition-all duration-500">
+                </div>
+              </div>
+            </div>
+
+            <p id="dashboard-week-status" class="text-sm font-semibold text-forma-lime">
+            </p>
+
+          </div>
+
+          <div class="mt-8 border-t border-forma-border pt-6">
+            <p id="dashboard-notice" class="text-xs leading-relaxed text-forma-muted">
+              Loading demonstration data...
+            </p>
+          </div>
+
+        </aside>
+      </div>
+
+      <p id="dashboard-status" role="status" aria-live="polite" class="mt-5 text-sm text-forma-muted">
+        Loading your dashboard...
+      </p>
+
+      <p id="dashboard-error" role="alert" class="mt-3 hidden text-sm text-red-400">
+      </p>
+
+      <button id="dashboard-retry" type="button" class="forma-btn-secondary mt-4 hidden">
+        Try again
+      </button>
+    </div>
+  </div>
+</section>
