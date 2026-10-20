@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const get = (id) => document.getElementById(id);
 
+  const clearButton = get("products-clear");
   const widget = get("products-widget");
   const list = get("products-list");
   const comparison = get("products-comparison-result");
@@ -15,6 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const status = get("products-status");
   const errorBox = get("products-error");
   const retryButton = get("products-retry");
+
 
   const numberFormat = new Intl.NumberFormat("en-US", {
     minimumFractionDigits: 2,
@@ -301,6 +303,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function renderComparison() {
     comparison.replaceChildren();
     selectedCount.textContent = `${selectedIds.size} / 2`;
+    clearButton.disabled = selectedIds.size === 0;
 
     const selected = products.filter(
       product => selectedIds.has(product.id)
@@ -365,7 +368,9 @@ document.addEventListener("DOMContentLoaded", () => {
         return bestOffer(a).priceMdl -
           bestOffer(b).priceMdl;
       }
-
+      if (sortSelect.value === "unit-price") {
+        return pricePer100g(a) - pricePer100g(b);
+      }
       if (sortSelect.value === "calories") {
         return a.caloriesPer100g -
           b.caloriesPer100g;
@@ -480,6 +485,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     } finally {
       widget.setAttribute("aria-busy", "false");
+      clearButton.disabled = true;
     }
   }
 
@@ -487,5 +493,13 @@ document.addEventListener("DOMContentLoaded", () => {
   sortSelect.addEventListener("change", renderProducts);
   retryButton.addEventListener("click", loadProducts);
 
+  clearButton.addEventListener("click", () => {
+    selectedIds.clear();
+
+    renderProducts();
+    renderComparison();
+
+    categorySelect.focus();
+  });
   loadProducts();
 });

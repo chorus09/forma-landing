@@ -343,3 +343,61 @@
     }
   }
 }
+
+@layer components {
+  .demo-link-card {
+    @apply flex flex-col rounded-forma border border-forma-border
+           bg-forma-surface p-6;
+    min-height: 13rem;
+    text-decoration: none;
+    transition:
+      border-color 200ms ease,
+      background-color 200ms ease,
+      transform 200ms ease;
+  }
+
+  .demo-link-card:hover {
+    border-color: var(--color-forma-lime);
+    background-color: #1d251b;
+    transform: translateY(-3px);
+  }
+
+  .demo-link-card:focus-visible {
+    outline: 2px solid var(--color-forma-lime);
+    outline-offset: 4px;
+  }
+
+  .demo-link-number {
+    @apply text-xs font-semibold tracking-widest text-forma-lime;
+  }
+
+  .demo-link-title {
+    @apply mt-6 font-display text-xl font-bold text-white;
+  }
+
+  .demo-link-description {
+    @apply mt-3 text-sm leading-relaxed text-forma-muted;
+  }
+
+  .demo-link-action {
+    @apply mt-auto pt-6 text-sm font-semibold text-forma-lime;
+  }
+
+  html {
+    scroll-padding-top: 1rem;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    .demo-link-card {
+      transition: none;
+    }
+
+    .demo-link-card:hover {
+      transform: none;
+    }
+  }
+}

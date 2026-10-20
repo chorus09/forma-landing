@@ -52,6 +52,7 @@
                     class="rounded-xl border border-forma-border bg-forma-surface px-4 py-3 text-sm text-white">
               <option value="name">Product name</option>
               <option value="price">Lowest package price</option>
+              <option value="unit-price">Lowest price per 100 g</option>
               <option value="calories">Lowest calories</option>
             </select>
           </div>
@@ -94,7 +95,10 @@
 
           <div id="products-comparison-result" class="mt-8 space-y-4">
           </div>
-
+          <button id="products-clear" type="button" class="forma-btn-secondary mt-6 w-full
+            disabled:cursor-not-allowed disabled:opacity-40">
+            Clear comparison
+          </button>
           <p class="mt-6 border-t border-forma-border pt-5 text-xs leading-relaxed text-forma-muted">
             Price per 100 g allows comparison of
             package costs. Different foods are not
