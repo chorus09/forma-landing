@@ -401,3 +401,27 @@
     }
   }
 }
+
+@layer components {
+  .hero-tilt-scene {
+    perspective: 1100px;
+    perspective-origin: center center;
+  }
+
+  .hero-tilt-card {
+    transform-style: preserve-3d;
+  }
+
+  .hero-tilt-scene.hero-tilt-active .hero-tilt-card {
+    will-change: transform;
+    box-shadow:
+      0 30px 80px rgba(0, 0, 0, 0.45),
+      0 0 50px rgba(199, 255, 82, 0.06);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-tilt-card {
+      transform: none !important;
+    }
+  }
+}
