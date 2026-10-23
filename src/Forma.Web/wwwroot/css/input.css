@@ -425,3 +425,101 @@
     }
   }
 }
+
+@layer components {
+  /* Buttons: subtle interactive feedback */
+  .forma-btn-primary,
+  .forma-btn-secondary {
+    transition:
+      background-color 200ms ease,
+      border-color 200ms ease,
+      color 200ms ease,
+      box-shadow 200ms ease,
+      filter 200ms ease,
+      scale 120ms ease;
+  }
+
+  .forma-btn-primary:hover:not(:disabled) {
+    box-shadow: 0 8px 28px rgba(199, 255, 82, 0.18);
+  }
+
+  .forma-btn-secondary:hover:not(:disabled) {
+    background-color: rgba(199, 255, 82, 0.06);
+  }
+
+  .forma-btn-primary:active:not(:disabled),
+  .forma-btn-secondary:active:not(:disabled) {
+    scale: 0.97;
+  }
+
+  .forma-btn-primary:focus-visible,
+  .forma-btn-secondary:focus-visible {
+    outline: 2px solid var(--color-forma-lime);
+    outline-offset: 4px;
+  }
+
+  /* Demo Hub: animated call-to-action text */
+  #demo .demo-link-action {
+    display: block;
+    transition: transform 220ms ease;
+  }
+
+  #demo .demo-link-card:hover .demo-link-action,
+  #demo .demo-link-card:focus-visible .demo-link-action {
+    transform: translateX(5px);
+  }
+
+  /* Features: gentle title highlight */
+  #features article h3 {
+    transition: color 220ms ease;
+  }
+
+  #features article:hover h3 {
+    color: var(--color-forma-lime);
+  }
+
+  /* How It Works: icon feedback */
+  #how-it-works article > div[aria-hidden="true"] {
+    transition: transform 220ms ease;
+  }
+
+  #how-it-works article:hover > div[aria-hidden="true"] {
+    transform: translateY(-4px);
+  }
+
+  /* Product selection: reinforce active state */
+  .product-icon {
+    transition: box-shadow 200ms ease;
+  }
+
+  .product-card[data-selected="true"] .product-icon {
+    box-shadow: 0 0 0 1px rgba(199, 255, 82, 0.32);
+  }
+
+  .product-card:focus-within {
+    border-color: var(--color-forma-lime);
+  }
+
+  /* Reduced motion: keep visual feedback without movement */
+  @media (prefers-reduced-motion: reduce) {
+    .forma-btn-primary,
+    .forma-btn-secondary,
+    #demo .demo-link-action,
+    #features article h3,
+    #how-it-works article > div[aria-hidden="true"],
+    .product-icon {
+      transition: none;
+    }
+
+    .forma-btn-primary:active:not(:disabled),
+    .forma-btn-secondary:active:not(:disabled) {
+      scale: 1;
+    }
+
+    #demo .demo-link-card:hover .demo-link-action,
+    #demo .demo-link-card:focus-visible .demo-link-action,
+    #how-it-works article:hover > div[aria-hidden="true"] {
+      transform: none;
+    }
+  }
+}
