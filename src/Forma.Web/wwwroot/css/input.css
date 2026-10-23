@@ -523,3 +523,74 @@
     }
   }
 }
+
+/* FORMA — Responsive Motion & Accessibility */
+
+@media (max-width: 767px) {
+  /* Keep dashboard updates instantaneous on mobile. */
+  .dashboard-bar {
+    animation: none;
+  }
+
+  #dashboard-goal-fill {
+    transition: none;
+  }
+}
+
+/* Touch devices must not receive hover movement. */
+@media (hover: none), (pointer: coarse) {
+  #features article:hover {
+    translate: none !important;
+    transform: none !important;
+  }
+
+  .demo-link-card:hover,
+  .product-card:hover {
+    transform: none !important;
+  }
+
+  #demo .demo-link-card:hover .demo-link-action,
+  #how-it-works article:hover > div[aria-hidden="true"] {
+    transform: none !important;
+  }
+}
+
+/* Respect operating-system reduced-motion settings. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* Tailwind hover translation and existing card effects. */
+  #features article {
+    translate: none !important;
+    transform: none !important;
+  }
+
+  .demo-link-card,
+  .product-card {
+    transform: none !important;
+  }
+
+  #demo .demo-link-action,
+  #how-it-works article > div[aria-hidden="true"] {
+    transform: none !important;
+  }
+
+  .dashboard-bar {
+    animation: none !important;
+  }
+
+  #dashboard-goal-fill {
+    transition: none !important;
+  }
+}
