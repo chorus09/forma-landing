@@ -183,10 +183,6 @@ FORMA is an educational demonstration. It does not currently include:
 - Live product prices or retailer integrations
 - Production medical or personalized fitness advice
 
-## Roadmap
-
-The initial roadmap contains 24 commits covering architecture, interactive demos, animation, testing, accessibility, performance and deployment preparation.
-
 ## Author
 
 Developed by [chorus09](https://github.com/chorus09).
