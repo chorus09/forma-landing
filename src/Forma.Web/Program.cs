@@ -75,3 +75,4 @@ app.MapGet("/api/demo/products",
     });
 
 app.Run();
+public partial class Program { }
