@@ -8,6 +8,10 @@
 
 **Source Code:** [GitHub Repository](https://github.com/chorus09/forma-landing)
 
+### Application Preview
+
+![FORMA Landing Page](docs/screenshots/forma-preview.png)
+
 FORMA is an interactive fitness and nutrition web experience built as a backend-focused software engineering portfolio project.
 
 It combines an ASP.NET Core backend with a responsive frontend and five interactive demonstrations.
