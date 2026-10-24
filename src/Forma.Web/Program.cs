@@ -3,6 +3,12 @@ using Forma.Web.Models;
 using Forma.Web.Services;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddResponseCompression(options =>
+{
+    // FORMA currently serves a public demo without
+    // authentication or user-specific secrets.
+    options.EnableForHttps = true;
+});
 
 builder.Services.AddRazorPages();
 
@@ -12,6 +18,7 @@ builder.Services.AddSingleton<WorkoutPlannerService>();
 builder.Services.AddSingleton<DemoDataService>();
 
 var app = builder.Build();
+app.UseResponseCompression();
 
 if (!app.Environment.IsDevelopment())
 {
@@ -20,6 +27,7 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+//app.UseStaticFiles();
 app.UseRouting();
 app.UseAuthorization();
 
