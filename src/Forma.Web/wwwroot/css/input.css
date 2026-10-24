@@ -594,3 +594,39 @@
     transition: none !important;
   }
 }
+
+/* FORMA — Accessibility and keyboard navigation */
+
+@layer components {
+  .skip-link {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 9999;
+    padding: 0.85rem 1.25rem;
+    border-radius: 0.75rem;
+    background: var(--color-forma-lime);
+    color: var(--color-forma-bg);
+    font-weight: 700;
+    text-decoration: none;
+    transform: translateY(-200%);
+  }
+
+  .skip-link:focus {
+    transform: translateY(0);
+    outline: 3px solid #ffffff;
+    outline-offset: 3px;
+  }
+}
+
+/* Visible keyboard focus throughout the application. */
+@layer base {
+  :where(a, button, input, select, textarea, [tabindex="0"]):focus-visible {
+    outline: 3px solid var(--color-forma-lime);
+    outline-offset: 3px;
+  }
+
+  #main-content:focus {
+    outline: none;
+  }
+}

@@ -1,11 +1,39 @@
-﻿<!DOCTYPE html>
+﻿@{
+    var pageTitle = ViewData["Title"] as string
+        ?? "FORMA — Your Body. Your Progress.";
+
+    var pageDescription = ViewData["Description"] as string
+        ?? "Explore FORMA, an interactive fitness and nutrition concept featuring calorie estimates, workout planning, progress tracking and product comparisons.";
+}
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="~/favicon.svg" />
 
-    <title>FORMA — Your Body. Your Progress.</title>
+    <link rel="icon" type="image/x-icon" href="~/favicon.ico" />
+
+    <link rel="apple-touch-icon" href="~/favicon.png" />
+
+    <title>@pageTitle</title>
+    <meta name="description" content="@pageDescription" />
+
+    <meta name="theme-color" content="#0b0d0c" />
+
+    <!-- Social sharing -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="FORMA" />
+    <meta property="og:title" content="@pageTitle" />
+    <meta property="og:description" content="@pageDescription" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="@pageTitle" />
+    <meta name="twitter:description" content="@pageDescription" />
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
@@ -17,25 +45,42 @@
 </head>
 
 <body class="min-h-screen bg-forma-bg font-sans text-white">
+
+    <a href="#main-content" class="skip-link">
+        Skip to main content
+    </a>
+
     @await Html.PartialAsync("_Navbar")
-    <main>
+
+    <main id="main-content" tabindex="-1">
         @RenderBody()
     </main>
+
     @await Html.PartialAsync("_Footer")
+
     @await RenderSectionAsync("Scripts", required: false)
+
     <script src="~/js/modules/progress.js" asp-append-version="true" defer></script>
+
     <script src="~/js/modules/calories.js" asp-append-version="true" defer></script>
+
     <script src="~/js/navigation.js" asp-append-version="true" defer></script>
+
     <script src="~/js/modules/workout.js" asp-append-version="true" defer></script>
+
     <script src="~/js/modules/dashboard.js" asp-append-version="true" defer></script>
+
     <script src="~/js/modules/products.js" asp-append-version="true" defer></script>
+
     <!-- FORMA Motion Engine -->
     <script src="~/vendor/gsap/gsap.min.js" asp-append-version="true" defer></script>
 
     <script src="~/vendor/gsap/ScrollTrigger.min.js" asp-append-version="true" defer></script>
 
     <script src="~/js/modules/motion.js" asp-append-version="true" defer></script>
+
     <script src="~/js/modules/hero-tilt.js" asp-append-version="true" defer></script>
+
     <script src="~/js/modules/microinteractions.js" asp-append-version="true" defer></script>
 </body>
 

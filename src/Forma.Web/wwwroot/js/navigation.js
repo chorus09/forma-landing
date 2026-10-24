@@ -1,44 +1,79 @@
 
 document.addEventListener("DOMContentLoaded", () => {
-  const menuButton = document.getElementById("mobile-menu-button");
-  const mobileMenu = document.getElementById("mobile-menu");
+  const menuButton =
+    document.getElementById("mobile-menu-button");
+
+  const mobileMenu =
+    document.getElementById("mobile-menu");
 
   if (!menuButton || !mobileMenu) return;
+
+  const menuLinks = [
+    ...mobileMenu.querySelectorAll("a")
+  ];
+
+  function isMenuOpen() {
+    return menuButton.getAttribute("aria-expanded") === "true";
+  }
 
   function setMenuState(isOpen) {
     mobileMenu.classList.toggle("hidden", !isOpen);
 
-    menuButton.setAttribute("aria-expanded", String(isOpen));
+    menuButton.setAttribute(
+      "aria-expanded",
+      String(isOpen)
+    );
+
     menuButton.setAttribute(
       "aria-label",
-      isOpen ? "Close navigation menu" : "Open navigation menu"
+      isOpen
+        ? "Close navigation menu"
+        : "Open navigation menu"
     );
   }
 
   menuButton.addEventListener("click", () => {
-    const isOpen = menuButton.getAttribute("aria-expanded") === "true";
-    setMenuState(!isOpen);
-  });
+    const shouldOpen = !isMenuOpen();
 
-  // Close menu after selecting a navigation link
-  mobileMenu.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => setMenuState(false));
-  });
+    setMenuState(shouldOpen);
 
-  // Allow keyboard users to close the menu
-  document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" &&
-      menuButton.getAttribute("aria-expanded") === "true") {
-      setMenuState(false);
-      menuButton.focus();
+    // Move keyboard focus into the opened menu
+    // only when the button was activated by keyboard.
+    if (shouldOpen && menuButton.matches(":focus-visible")) {
+      menuLinks[0]?.focus();
     }
   });
 
-  // Reset menu when switching to desktop
-  window.matchMedia("(min-width: 768px)")
-    .addEventListener("change", (event) => {
-      if (event.matches) {
-        setMenuState(false);
-      }
+  for (const link of menuLinks) {
+    link.addEventListener("click", () => {
+      setMenuState(false);
     });
+  }
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key !== "Escape" || !isMenuOpen()) {
+      return;
+    }
+
+    setMenuState(false);
+    menuButton.focus();
+  });
+
+  // Close an opened mobile menu when resizing
+  // to the desktop navigation breakpoint.
+  const desktopQuery = window.matchMedia(
+    "(min-width: 768px)"
+  );
+
+  desktopQuery.addEventListener("change", (event) => {
+    if (!event.matches) return;
+
+    if (isMenuOpen()) {
+      setMenuState(false);
+
+      if (mobileMenu.contains(document.activeElement)) {
+        document.activeElement.blur();
+      }
+    }
+  });
 });
