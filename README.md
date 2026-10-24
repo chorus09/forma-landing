@@ -4,14 +4,9 @@
 **Your Body. Your Progress.**
 
 
-**Live Demo:** [FORMA on Render](YOUR_RENDER_URL)
+**Live Demo:** [FORMA on Render](https://forma-landing-adwa.onrender.com/)
 
 **Source Code:** [GitHub Repository](https://github.com/chorus09/forma-landing)
-
-### Application Preview
-
-![FORMA Landing Page](docs/screenshots/forma-preview.png)
-
 
 FORMA is an interactive fitness and nutrition web experience built as a backend-focused software engineering portfolio project.
 
